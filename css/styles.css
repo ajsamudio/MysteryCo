@@ -10,13 +10,10 @@
   --text-muted:  #6B7280;
   --text-light:  #FFFFFF;
   --btn-dark:    #000000;
-  --placeholder-bg:     #D1D5DB;
-  --placeholder-color:  #6B7280;
 
   --font-base: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
   --container-max: 1200px;
-  --container-pad: 0 24px;
 
   --transition: 0.25s ease;
 }
@@ -78,35 +75,89 @@ p { font-size: 1rem; }
 /* =============================================================
    4. Utilities
    ============================================================= */
-.container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: var(--container-pad);
-}
-
-/* Generic placeholder box — replaces all real images */
-.img-placeholder {
-  background-color: var(--placeholder-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--placeholder-color);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 8px;
-  width: 100%;
-}
-
 /* Aspect-ratio helpers */
 .ratio-16-9  { aspect-ratio: 16 / 9; }
 .ratio-9-5   { aspect-ratio: 9 / 5; }
 .ratio-1-1   { aspect-ratio: 1 / 1; }
 .ratio-4-5   { aspect-ratio: 4 / 5; }
 .ratio-3-4   { aspect-ratio: 3 / 4; }
-.ratio-2-3   { aspect-ratio: 2 / 3; }
+
+/* Responsive video embed */
+.video-embed {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+/* YouTube facade — thumbnail + play button, replaced by iframe on click */
+.yt-facade {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yt-facade .yt-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.yt-facade:hover .yt-thumb {
+  opacity: 0.75;
+}
+
+.yt-play-btn {
+  position: relative;
+  z-index: 2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 72px;
+  height: 52px;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.yt-play-btn:hover {
+  transform: scale(1.12);
+}
+
+.yt-play-btn svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Image framing utility */
+.img-frame {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+  border-radius: 2px;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* =============================================================
    5. Header
@@ -437,6 +488,13 @@ p { font-size: 1rem; }
 .artist-photo-grid .photo-tr { grid-column: 3; grid-row: 1; }
 .artist-photo-grid .photo-br { grid-column: 3; grid-row: 2; }
 
+.photo-cm .img-frame { height: 100%; min-height: 400px; }
+
+/* Photo crop alignment — show upper subject rather than centre-crop */
+.photo-br .img-frame img,
+.press-article:first-of-type .img-frame img,
+.press-article:last-of-type  .img-frame img { object-position: top; }
+
 /* About block below the grid */
 .artist-about {
   display: grid;
@@ -574,18 +632,8 @@ p { font-size: 1rem; }
   margin-bottom: 10px;
 }
 
-.press-article-text .photo-credit {
-  font-size: 0.75rem;
-  color: var(--placeholder-color);
-  font-style: italic;
-}
-
 .press-article-image {
   position: relative;
-  width: 100%;
-}
-
-.press-article-image .img-placeholder {
   width: 100%;
 }
 
@@ -681,11 +729,6 @@ p { font-size: 1rem; }
 
   .footer-inner {
     grid-template-columns: 1.5fr 1fr 1fr;
-  }
-
-  .footer-nav ul,
-  .footer-social ul {
-    flex-direction: column;
   }
 }
 

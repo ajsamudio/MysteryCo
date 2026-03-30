@@ -1,6 +1,6 @@
 /**
  * main.js — Mystery Entertainment
- * Handles mobile navigation toggle only.
+ * Handles mobile navigation toggle and YouTube facade.
  */
 
 (function () {
@@ -38,5 +38,17 @@
     if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
       closeNav();
     }
+  });
+}());
+
+/* =============================================================
+   YouTube facade — click opens video on YouTube (embedding disabled)
+   ============================================================= */
+(function () {
+  document.querySelectorAll('.yt-facade').forEach(function (facade) {
+    facade.addEventListener('click', function () {
+      var videoId = facade.getAttribute('data-video-id');
+      window.open('https://www.youtube.com/watch?v=' + videoId, '_blank', 'noopener,noreferrer');
+    });
   });
 }());
