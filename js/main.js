@@ -41,14 +41,4 @@
   });
 }());
 
-/* =============================================================
-   YouTube facade — click opens video on YouTube (embedding disabled)
-   ============================================================= */
-(function () {
-  document.querySelectorAll('.yt-facade').forEach(function (facade) {
-    facade.addEventListener('click', function () {
-      var videoId = facade.getAttribute('data-video-id');
-      window.open('https://www.youtube.com/watch?v=' + videoId, '_blank', 'noopener,noreferrer');
-    });
-  });
-}());
+
