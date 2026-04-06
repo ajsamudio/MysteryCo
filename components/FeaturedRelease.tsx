@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FeaturedRelease() {
   return (
-    <section id="featured-release" className="featured-release" aria-label="Featured Release">
+    <section id="featured-release" className="featured-release" aria-label="Featured Release" data-fade>
       <div className="release-image">
         <div className="img-frame ratio-9-5">
           <Image

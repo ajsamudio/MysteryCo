@@ -26,7 +26,7 @@ const releases = [
 
 export default function LatestReleases() {
   return (
-    <section id="latest-releases" className="latest-releases" aria-label="Latest Releases">
+    <section id="latest-releases" className="latest-releases" aria-label="Latest Releases" data-fade>
       <div className="latest-releases-inner">
         <h2>Latest Releases.</h2>
         <p className="section-sub">Listen to our artist&apos;s latest collections.</p>

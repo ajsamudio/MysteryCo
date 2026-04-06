@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ConnectSection() {
   return (
-    <section id="connect" className="press-section" aria-label="Connect with Mystery Entertainment">
+    <section id="connect" className="press-section" aria-label="Connect with Mystery Entertainment" data-fade>
       <h2>Connect With Mystery Entertainment.</h2>
 
       <article className="press-article">
@@ -32,7 +32,7 @@ export default function ConnectSection() {
         </div>
       </article>
 
-      <article className="press-article">
+      <article className="press-article press-article--reverse">
         <div className="press-article-text">
           <p className="publication">TikTok</p>
           <h3>
