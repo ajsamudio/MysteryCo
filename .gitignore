@@ -1,3 +1,9 @@
 # Next.js
 .next/
 node_modules/
+
+# Claude Code
+.claude/
+
+# Personal files
+*.pdf
