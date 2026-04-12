@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const releases = [
   {
@@ -34,21 +35,23 @@ export default function LatestReleases() {
         <div className="releases-grid">
           {releases.map((release) => (
             <article className="release-card" key={release.title}>
-              <div className="album-cover">
-                <div className="img-frame ratio-1-1">
-                  <Image
-                    src={release.src}
-                    alt={release.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 384px"
-                  />
+              <Link href="/artists/skoobe" className="release-card-link">
+                <div className="album-cover">
+                  <div className="img-frame ratio-1-1">
+                    <Image
+                      src={release.src}
+                      alt={release.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 384px"
+                    />
+                  </div>
                 </div>
-              </div>
-              <p className="artist-name">{release.artist}</p>
-              <p className="album-title">
-                <a href="#">{release.title} <span className="arrow">↗</span></a>
-              </p>
-              <p className="album-year">{release.year}</p>
+                <p className="artist-name">{release.artist}</p>
+                <p className="album-title">
+                  {release.title} <span className="arrow">↗</span>
+                </p>
+                <p className="album-year">{release.year}</p>
+              </Link>
             </article>
           ))}
         </div>

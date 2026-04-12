@@ -805,6 +805,266 @@ p { font-size: 1rem; }
 }
 
 /* =============================================================
+   15. Release Card Link (home page cards)
+   ============================================================= */
+.release-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.release-card-link:hover {
+  opacity: 0.72;
+}
+
+/* =============================================================
+   16. Artist Page — Full-bleed Banner
+   ============================================================= */
+.ap-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #111;
+}
+
+/* =============================================================
+   17. Artist Page — Artist Name
+   ============================================================= */
+.ap-name-wrap {
+  padding: 16px 24px 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.ap-name {
+  font-size: clamp(2.8rem, 9vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-transform: lowercase;
+  color: var(--text-dark);
+}
+
+/* =============================================================
+   18. Artist Page — Centered Bio Block
+   ============================================================= */
+.ap-center-block {
+  padding: 40px 24px 32px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ap-center-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+
+.ap-center-bio {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.ap-bio-link {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--text-dark);
+  padding-bottom: 2px;
+  transition: opacity var(--transition);
+}
+
+.ap-bio-link:hover { opacity: 0.5; }
+
+/* =============================================================
+   19. Artist Page — Socials + Stream
+   ============================================================= */
+.ap-links-block {
+  padding: 0 24px 52px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ap-links-two-col {
+  display: flex;
+  gap: 64px;
+  justify-content: center;
+}
+
+.ap-links-group {
+  min-width: 110px;
+}
+
+.ap-col-heading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.ap-links-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ap-col-link {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.ap-col-link:hover { opacity: 0.45; }
+
+/* =============================================================
+   20. Artist Page — Releases
+   ============================================================= */
+.ap-releases {
+  background: var(--bg-releases);
+  padding: 56px 24px;
+}
+
+.ap-releases-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.ap-releases-heading {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.ap-releases-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.ap-releases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 12px;
+}
+
+.ap-release-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition);
+}
+
+.ap-release-link:hover { opacity: 0.72; }
+
+.ap-release-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.ap-release-artist {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* =============================================================
+   21. Artist Page — Biography
+   ============================================================= */
+.ap-bio-section {
+  padding: 64px 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.ap-bio-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.ap-bio-content .ap-col-heading {
+  margin-bottom: 18px;
+}
+
+.ap-bio-content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 14px;
+  max-width: 520px;
+}
+
+.ap-bio-content p:last-child { margin-bottom: 0; }
+
+.ap-bio-content strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.ap-bio-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* ---- Artist page responsive -------------------------------- */
+@media (min-width: 768px) {
+  .ap-banner {
+    aspect-ratio: 16 / 7;
+  }
+
+  .ap-name-wrap {
+    padding-top: 22px;
+  }
+
+  .ap-releases-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ap-bio-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ap-name-wrap {
+    padding-top: 28px;
+  }
+
+  .ap-releases {
+    padding: 72px 24px;
+  }
+
+  .ap-bio-section {
+    padding: 80px 24px;
+  }
+}
+
+/* =============================================================
    Scroll Fade-In
    ============================================================= */
 [data-fade] {

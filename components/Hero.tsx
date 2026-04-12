@@ -10,7 +10,10 @@ export default function Hero() {
           <video
             className="video-player"
             controls
-            preload="metadata"
+            autoPlay
+            muted
+            playsInline
+            preload="auto"
             poster="/media/SkoobeThumbnail.png"
             aria-label="Skoobe — No Time (Official Music Video)"
           >
