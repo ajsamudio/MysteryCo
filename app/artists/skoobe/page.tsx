@@ -70,7 +70,7 @@ export default function SkoobePage() {
 
         {/* ── Artist Name ───────────────────────────────────── */}
         <div className="ap-name-wrap">
-          <h1 className="ap-name">skoobe</h1>
+          <h1 className="ap-name" style={{ textAlign: "center" }}>Skoobe</h1>
         </div>
 
         {/* ── Centered Bio Block ────────────────────────────── */}
