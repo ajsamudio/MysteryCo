@@ -21,15 +21,51 @@ export default function PhotoStrip() {
     const el = scrollRef.current;
     if (!el) return;
 
-    const tick = () => {
-      el.scrollLeft += 1;
-      if (el.scrollLeft >= el.scrollWidth / 2) {
-        el.scrollLeft = 0;
-      }
+    // Time-based so the speed is identical on 60Hz and 120Hz displays;
+    // the old per-frame increment ran twice as fast on high-refresh screens.
+    const SPEED = 60; // px per second
+    let last = 0;
+    // Tracked as a float: a sub-pixel per-frame step could otherwise be
+    // rounded away by scrollLeft and stall the marquee on 120Hz displays.
+    let offset = 0;
+
+    const tick = (now: number) => {
+      const dt = last ? (now - last) / 1000 : 0;
+      last = now;
+      const half = el.scrollWidth / 2;
+      offset += SPEED * dt;
+      if (half > 0 && offset >= half) offset -= half;
+      el.scrollLeft = offset;
       rafRef.current = requestAnimationFrame(tick);
     };
 
-    rafRef.current = requestAnimationFrame(tick);
+    const start = () => {
+      if (rafRef.current) return;
+      last = 0;
+      offset = el.scrollLeft;
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    const stop = () => {
+      if (!rafRef.current) return;
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = 0;
+    };
+
+    // Only animate while the strip is actually on screen and the tab is
+    // visible — otherwise this loop forces layout every frame for nothing.
+    let onScreen = false;
+    const sync = () => (onScreen && !document.hidden ? start() : stop());
+
+    const visibility = new IntersectionObserver(
+      ([entry]) => {
+        onScreen = entry.isIntersecting;
+        sync();
+      },
+      { threshold: 0 }
+    );
+    visibility.observe(el);
+    document.addEventListener("visibilitychange", sync);
 
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -43,7 +79,9 @@ export default function PhotoStrip() {
     el.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      cancelAnimationFrame(rafRef.current);
+      stop();
+      visibility.disconnect();
+      document.removeEventListener("visibilitychange", sync);
       el.removeEventListener("wheel", handleWheel);
     };
   }, []);

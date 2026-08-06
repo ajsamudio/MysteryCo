@@ -7,7 +7,6 @@ import ArtistSection from "@/components/ArtistSection";
 import CTABanner from "@/components/CTABanner";
 import ConnectSection from "@/components/ConnectSection";
 import Footer from "@/components/Footer";
-import ScrollObserver from "@/components/ScrollObserver";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
         <ConnectSection />
       </main>
       <Footer />
-      <ScrollObserver />
     </>
   );
 }

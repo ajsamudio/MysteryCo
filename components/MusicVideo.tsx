@@ -2,11 +2,9 @@ const VIDEO_ID = "1K0OsRG4FAQ";
 const VIDEO_TITLE = "Skoobe — Where I'm From (Official Music Video)";
 const VIDEO_URL = `https://www.youtube.com/watch?v=${VIDEO_ID}`;
 
-/* `fade` is opt-out: the artist page has no ScrollObserver mounted, so the
-   fade-in class would never be applied and the section would stay hidden. */
-export default function MusicVideo({ fade = true }: { fade?: boolean }) {
+export default function MusicVideo() {
   return (
-    <section id="music-video" className="music-video" aria-label="Latest Music Video" data-fade={fade ? "" : undefined}>
+    <section id="music-video" className="music-video" aria-label="Latest Music Video" data-fade>
       <div className="music-video-inner">
         <h2>New Music Video.</h2>
         <p className="section-sub">

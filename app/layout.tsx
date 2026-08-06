@@ -6,7 +6,6 @@ import ScrollObserver from "@/components/ScrollObserver";
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/media/SkoobeThumbnail.png",
-        width: 1200,
+        width: 1120,
         height: 630,
         alt: "Mystery Entertainment — Independent Record Label",
       },
@@ -104,6 +103,7 @@ const jsonLd = {
       sameAs: [
         "https://www.instagram.com/mysteryentertainment_",
         "https://www.tiktok.com/@mysteryentertainment1",
+        "https://www.youtube.com/channel/UCttEBLCaociI_dN_gdCE6kA",
         "https://mysteryentertainment.shop",
       ],
       member: [
@@ -117,6 +117,12 @@ const jsonLd = {
         },
       ],
       album: [
+        {
+          "@type": "MusicAlbum",
+          name: "Where I'm From",
+          byArtist: { "@type": "MusicGroup", name: "Skoobe" },
+          datePublished: "2026",
+        },
         {
           "@type": "MusicAlbum",
           name: "COME HOME",

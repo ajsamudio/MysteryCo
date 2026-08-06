@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Skoobe | Mystery Entertainment",
     description:
       "Skoobe is an American rapper, songwriter, and recording producer. Born in Southern California — home of Mystery Entertainment.",
-    images: [{ url: "/media/SkoobeThumbnail.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/media/SkoobeThumbnail.png", width: 1120, height: 630 }],
   },
 };
 
@@ -155,7 +155,7 @@ export default function SkoobePage() {
         </section>
 
         {/* ── Music Video ───────────────────────────────────── */}
-        <MusicVideo fade={false} />
+        <MusicVideo />
 
         {/* ── Biography ─────────────────────────────────────── */}
         <section id="biography" className="ap-bio-section" aria-label="Biography">
