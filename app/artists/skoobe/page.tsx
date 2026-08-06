@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MusicVideo from "@/components/MusicVideo";
 
 export const metadata: Metadata = {
   title: "Skoobe",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 
 const socials = [
   { label: "Instagram", href: "https://www.instagram.com/therealskoobe" },
+  { label: "YouTube", href: "https://www.youtube.com/channel/UCttEBLCaociI_dN_gdCE6kA" },
 ];
 
 const streams = [
@@ -144,6 +146,9 @@ export default function SkoobePage() {
             </div>
           </div>
         </section>
+
+        {/* ── Music Video ───────────────────────────────────── */}
+        <MusicVideo fade={false} />
 
         {/* ── Biography ─────────────────────────────────────── */}
         <section id="biography" className="ap-bio-section" aria-label="Biography">

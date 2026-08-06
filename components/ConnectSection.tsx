@@ -58,6 +58,41 @@ export default function ConnectSection() {
           </div>
         </div>
       </article>
+
+      <article className="press-article">
+        <div className="press-article-text">
+          <p className="publication">YouTube</p>
+          <h3>
+            <a
+              href="https://www.youtube.com/channel/UCttEBLCaociI_dN_gdCE6kA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mystery Entertainment
+            </a>
+            <span className="press-arrow" aria-hidden="true">↗</span>
+          </h3>
+          <p>Watch official music videos, visuals, and full-length releases on our YouTube channel.</p>
+        </div>
+        <div className="press-article-image">
+          <div className="img-frame ratio-4-5">
+            <Image
+              src="/media/Skoobephoto5.png"
+              alt="Mystery Entertainment YouTube"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+            />
+          </div>
+        </div>
+      </article>
+
+      <div className="press-contact">
+        <p className="publication">Email</p>
+        <p>
+          <a href="mailto:MysteryEnt21@gmail.com">MysteryEnt21@gmail.com</a>
+        </p>
+        <p>For bookings, features, press, and general inquiries.</p>
+      </div>
     </section>
   );
 }

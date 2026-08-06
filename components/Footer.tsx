@@ -39,6 +39,15 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a
+                href="https://www.youtube.com/channel/UCttEBLCaociI_dN_gdCE6kA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+              </a>
+            </li>
+            <li>
               <a href="https://mysteryentertainment.shop" target="_blank" rel="noopener noreferrer">
                 Shop
               </a>

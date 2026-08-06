@@ -14,10 +14,10 @@ export default function Hero() {
             muted
             playsInline
             preload="auto"
-            poster="/media/SkoobeThumbnail.png"
-            aria-label="Skoobe — No Time (Official Music Video)"
+            poster="/media/SkoobeWhereImFromPoster.jpg"
+            aria-label="Skoobe — Where I'm From (Official Music Video)"
           >
-            <source src="/media/Skoobe.mp4" type="video/mp4" />
+            <source src="/media/SkoobeWhereImFrom.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
