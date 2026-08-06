@@ -30,6 +30,13 @@ const streams = [
 
 const releases = [
   {
+    src: "/media/SkoobeWhereImFromCover.jpg",
+    alt: "Skoobe — Where I'm From cover art",
+    title: "Where I'm From",
+    year: "2026",
+    href: "https://open.spotify.com/album/3HrzygokWCNyMD3ypkEnER",
+  },
+  {
     src: "/media/SkoobeComeHome.png",
     alt: "Skoobe — COME HOME cover art",
     title: "COME HOME",

@@ -77,7 +77,7 @@ export default function ConnectSection() {
         <div className="press-article-image">
           <div className="img-frame ratio-4-5">
             <Image
-              src="/media/Skoobephoto5.png"
+              src="/media/skoobe-photo-08.jpeg"
               alt="Mystery Entertainment YouTube"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"

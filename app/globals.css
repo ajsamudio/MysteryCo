@@ -755,7 +755,7 @@ p { font-size: 1rem; }
   .menu-btn { display: none; }
 
   .releases-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .artist-about {
@@ -1041,7 +1041,7 @@ p { font-size: 1rem; }
   }
 
   .ap-releases-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .ap-bio-inner {
@@ -1061,6 +1061,13 @@ p { font-size: 1rem; }
 
   .ap-bio-section {
     padding: 80px 24px;
+  }
+}
+
+/* Four releases: 2x2 on tablet, a single row on desktop. */
+@media (min-width: 1024px) {
+  .releases-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

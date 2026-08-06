@@ -3,6 +3,13 @@ import Link from "next/link";
 
 const releases = [
   {
+    src: "/media/SkoobeWhereImFromCover.jpg",
+    alt: "Skoobe — Where I'm From cover art",
+    artist: "Skoobe",
+    title: "Where I'm From",
+    year: "2026",
+  },
+  {
     src: "/media/SkoobeComeHome.png",
     alt: "Skoobe — COME HOME cover art",
     artist: "Skoobe",
