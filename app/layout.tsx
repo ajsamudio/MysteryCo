@@ -84,7 +84,7 @@ const jsonLd = {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/media/SkoobeThumbnail.png`,
+        url: `${SITE_URL}/brand/mystery-logo-black.png`,
       },
       description:
         "Mystery Entertainment is an independent record label based in Los Angeles, CA. Founded in 2021, home of artist Skoobe.",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,7 +7,13 @@ export default function Footer() {
       <div className="footer-inner">
 
         <div className="footer-brand">
-          <p className="footer-name">Mystery Entertainment</p>
+          <Image
+            src="/brand/mystery-logo-white.png"
+            alt="Mystery Entertainment"
+            width={1200}
+            height={295}
+            className="footer-logo"
+          />
           <p className="footer-copy">
             &copy; Mystery Entertainment 2026 | All Rights Reserved.<br />
             Conjunction of culture and artistic talent. Based in Los Angeles.

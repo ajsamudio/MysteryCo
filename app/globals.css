@@ -212,18 +212,15 @@ p { font-size: 1rem; }
 }
 
 .logo-mark {
-  width: 44px;
-  height: 36px;
-  background: var(--text-dark);
-  color: var(--text-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  border-radius: 2px;
+  width: auto;
+  height: 26px;
   flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .logo-mark {
+    height: 32px;
+  }
 }
 
 .site-name {
@@ -699,12 +696,10 @@ p { font-size: 1rem; }
   gap: 40px;
 }
 
-.footer-brand .footer-name {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+.footer-brand .footer-logo {
+  width: auto;
+  height: 34px;
+  margin-bottom: 16px;
 }
 
 .footer-brand .footer-copy {

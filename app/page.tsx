@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PhotoStrip from "@/components/PhotoStrip";
-import FeaturedRelease from "@/components/FeaturedRelease";
 import LatestReleases from "@/components/LatestReleases";
 import ArtistSection from "@/components/ArtistSection";
 import CTABanner from "@/components/CTABanner";
@@ -14,7 +13,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <FeaturedRelease />
         <LatestReleases />
         <PhotoStrip />
         <ArtistSection />
