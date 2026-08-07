@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,14 @@ export default function Header() {
       <header className="site-header" role="banner">
         <div className="header-inner">
           <Link href="/" className="logo-wrap" aria-label="Mystery Entertainment — Home">
-            <div className="logo-mark" aria-hidden="true">ME</div>
+            <Image
+              src="/brand/mystery-logo-black.png"
+              alt="Mystery Entertainment"
+              width={1200}
+              height={295}
+              className="logo-mark"
+              priority
+            />
           </Link>
 
           <span className="site-name">Mystery Entertainment</span>
