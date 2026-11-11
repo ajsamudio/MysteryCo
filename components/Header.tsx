@@ -31,10 +31,10 @@ export default function Header() {
         <div className="header-inner">
           <Link href="/" className="logo-wrap" aria-label="Mystery Entertainment — Home">
             <Image
-              src="/brand/mystery-logo-black.png"
+              src="/brand/mystery-logo-white.png"
               alt="Mystery Entertainment"
               width={1200}
-              height={295}
+              height={296}
               className="logo-mark"
               priority
             />

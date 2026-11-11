@@ -23,12 +23,19 @@ const socials = [
 ];
 
 const streams = [
-  { label: "Apple Music", href: "https://music.apple.com/us/album/come-home-single/1887215237" },
+  { label: "Apple Music", href: "https://itunes.apple.com/us/artist/skoobe/1438357206" },
   { label: "Pandora",     href: "https://www.pandora.com/artist/skoobe/come-home/ALvxKxJkf9kqpV6?part=ug-desktop&corr=93267175485239337" },
-  { label: "Spotify",     href: "https://open.spotify.com/search/skoobe" },
+  { label: "Spotify",     href: "https://open.spotify.com/artist/3IOkaL1kt0uKKvZm2BPZy4" },
 ];
 
 const releases = [
+  {
+    src: "/media/SkoobeCrowdControlCover.jpg",
+    alt: "Skoobe — Crowd Control (feat. Yung Simmie) cover art",
+    title: "Crowd Control",
+    year: "2026",
+    href: "https://open.spotify.com/artist/3IOkaL1kt0uKKvZm2BPZy4",
+  },
   {
     src: "/media/SkoobeWhereImFromCover.jpg",
     alt: "Skoobe — Where I'm From cover art",
@@ -68,12 +75,12 @@ export default function SkoobePage() {
         {/* ── Full-bleed Banner ─────────────────────────────── */}
         <div className="ap-banner">
           <Image
-            src="/media/SkoobeMarathonPhoto.png"
-            alt="Skoobe — Mystery Entertainment"
+            src="/media/SkoobeCrowdControlBanner.jpg"
+            alt="Skoobe — Crowd Control (feat. Yung Simmie)"
             fill
             sizes="100vw"
             priority
-            style={{ objectFit: "cover", objectPosition: "center top" }}
+            style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>
 
@@ -180,6 +187,8 @@ export default function SkoobePage() {
                 In 2026, Skoobe returned with <strong>Come Home</strong>, his
                 most personal work to date — a record that captures growth,
                 reflection, and the relentless drive that has defined his career.
+                His latest single, <strong>Crowd Control</strong> (feat. Yung
+                Simmie), is out now.
               </p>
             </div>
             <div className="ap-bio-photos">

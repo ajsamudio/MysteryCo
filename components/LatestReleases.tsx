@@ -3,6 +3,13 @@ import Link from "next/link";
 
 const releases = [
   {
+    src: "/media/SkoobeCrowdControlCover.jpg",
+    alt: "Skoobe — Crowd Control (feat. Yung Simmie) cover art",
+    artist: "Skoobe",
+    title: "Crowd Control",
+    year: "2026",
+  },
+  {
     src: "/media/SkoobeWhereImFromCover.jpg",
     alt: "Skoobe — Where I'm From cover art",
     artist: "Skoobe",

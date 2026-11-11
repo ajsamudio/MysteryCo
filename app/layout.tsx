@@ -87,8 +87,8 @@ const jsonLd = {
         url: `${SITE_URL}/brand/mystery-logo-black.png`,
       },
       description:
-        "Mystery Entertainment is an independent record label based in Los Angeles, CA. Founded in 2021, home of artist Skoobe.",
-      foundingDate: "2021",
+        "Mystery Entertainment is an independent record label based in Los Angeles, CA. Founded in 2026, home of artist Skoobe.",
+      foundingDate: "2026",
       location: {
         "@type": "Place",
         name: "Los Angeles, CA",
@@ -161,7 +161,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={dmSans.variable}>
       <head>
-        <meta name="theme-color" content="#1A202C" />
+        <meta name="theme-color" content="#000000" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

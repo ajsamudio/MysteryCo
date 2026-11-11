@@ -7,7 +7,7 @@ export default function ArtistSection() {
         <div className="artist-about-text">
           <h2>Artist-First Mentality.</h2>
           <p>
-            Founded in 2021, Mystery Entertainment is uniquely positioned within culture
+            Founded in 2026, Mystery Entertainment is uniquely positioned within culture
             to propel talent. A conjunction of culture and artistic talent.
           </p>
           <p className="location">Los Angeles, CA</p>
