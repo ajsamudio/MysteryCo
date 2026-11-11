@@ -9,13 +9,14 @@ export default function Hero() {
         <div className="video-embed ratio-16-9">
           <video
             className="video-player"
+            controls
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
             poster="/media/CrowdControlLoopPoster.jpg"
-            aria-label="Skoobe — Crowd Control (feat. Yung Simmie) cover art loop"
+            aria-label="Skoobe — Crowd Control (feat. Yung Simmie) visualizer"
           >
             <source src="/media/CrowdControlLoop.mp4" type="video/mp4" />
             Your browser does not support the video tag.
