@@ -1152,3 +1152,34 @@ p { font-size: 1rem; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Hero "Tap for sound" button */
+.sound-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.sound-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.04);
+}
+.sound-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
