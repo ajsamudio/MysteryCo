@@ -9,11 +9,15 @@ export default function Hero() {
     const video = videoRef.current;
     if (!video) return;
 
-    const events = ["pointerdown", "keydown", "touchstart", "scroll"] as const;
+    const events = ["pointerdown", "keydown", "touchend"] as const;
     const unmuteOnInteraction = () => {
-      video.muted = false;
-      video.play().catch(() => {});
       events.forEach((e) => window.removeEventListener(e, unmuteOnInteraction));
+      video.muted = false;
+      video.play().catch(() => {
+        // Still not allowed to play with sound: keep playing muted.
+        video.muted = true;
+        video.play().catch(() => {});
+      });
     };
 
     // Try to play with sound. Browsers block this unless the visitor has
