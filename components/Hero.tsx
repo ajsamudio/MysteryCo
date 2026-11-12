@@ -18,7 +18,7 @@ export default function Hero() {
             poster="/media/1110-poster.jpg"
             aria-label="Mystery Entertainment header video"
           >
-            <source src="/media/1110.mp4" type="video/mp4" />
+            <source src="/media/1110-audio.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
