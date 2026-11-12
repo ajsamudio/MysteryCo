@@ -7,3 +7,6 @@ node_modules/
 
 # Personal files
 *.pdf
+
+# TypeScript build cache
+*.tsbuildinfo

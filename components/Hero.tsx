@@ -15,10 +15,10 @@ export default function Hero() {
             loop
             playsInline
             preload="auto"
-            poster="/media/CrowdControlLoopPoster.jpg"
-            aria-label="Skoobe — Crowd Control (feat. Yung Simmie) visualizer"
+            poster="/media/1110-poster.jpg"
+            aria-label="Mystery Entertainment header video"
           >
-            <source src="/media/CrowdControlLoop.mp4" type="video/mp4" />
+            <source src="/media/1110.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
